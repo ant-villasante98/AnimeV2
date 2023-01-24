@@ -1,0 +1,25 @@
+<button class="btn btn-success mb-4" type="button" routerLink="/">Inicio</button>
+<div class="contenedor-detalle-anime" *ngIf="cargaFinalizada">
+    <div class="titulo-anime">
+        {{Elemento?.title}}
+    </div>
+    <div class="row pt-3">
+        <div class="col col-md-3">
+            <img class="content-img-anime" src="{{Elemento?.images.jpg.image_url}}" alt="">
+        </div>
+        <div class="col-auto col-md p-3">
+            <p class="sinopsis">{{Elemento?.synopsis}}</p>
+        </div>
+    </div>
+
+    <div>
+        {{Elemento?.score}}
+    </div>
+
+    <a href="{{Elemento?.trailer_url}}">trailer</a>
+    <div class="contenedor-video">
+        <iframe [src]="urlVideo" width="100%" height="auto"></iframe>
+    </div>
+    <!-- <iframe src="{{Elemento?.trailer_url}}" frameborder="1" width="100%" height="auto"></iframe> -->
+
+</div>

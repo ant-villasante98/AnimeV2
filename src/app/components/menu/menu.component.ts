@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { gsap } from 'gsap';
 import { Anime } from 'src/app/models/anime';
@@ -14,9 +14,9 @@ export class MenuComponent implements OnInit {
   @ViewChild('btnBuscar', { static: true }) btnBuscar: ElementRef<HTMLElement>;
   @ViewChild('inputNombreBusqueda', { static: true }) inputNombreBusqueda: ElementRef<HTMLElement>;
 
-  formBuscar: FormGroup;
+  formBuscar: UntypedFormGroup;
   constructor(
-    private form: FormBuilder,
+    private form: UntypedFormBuilder,
     private router: Router
   ) { }
 

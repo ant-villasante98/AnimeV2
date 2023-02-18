@@ -1,8 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { gsap } from 'gsap';
-import { Anime } from 'src/app/models/anime';
+import { Anime } from 'src/app/core/models/anime';
 
 @Component({
   selector: 'app-menu',
@@ -32,7 +31,6 @@ export class MenuComponent implements OnInit {
       nombre: ['']
     });
 
-    this.initAnimacio();
   }
 
   buscar() {
@@ -45,13 +43,6 @@ export class MenuComponent implements OnInit {
       this.router.navigate(['buscar/', q], {
         skipLocationChange: false, replaceUrl: false
       }));
-  }
-  initAnimacio() {
-    gsap.from(this.tituloPagina.nativeElement, {
-      duration: 2,
-      x: (-screen.width / 2.5),
-      autoAlpha: 0
-    });
   }
   onKeyUp(event) {
     if (event.keyCode == 13) {

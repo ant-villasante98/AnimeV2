@@ -2,7 +2,7 @@ import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest
 import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
 import { catchError, finalize } from "rxjs/operators";
-import { ModalDialogService } from "../services/modal-dialog.service";
+import { ModalDialogService } from "../../services/modal-dialog.service";
 
 
 @Injectable()

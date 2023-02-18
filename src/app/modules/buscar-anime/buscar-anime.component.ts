@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Params, Router } from '@angular/router';
-import gsap from 'gsap/all';
-import { Anime } from 'src/app/models/anime';
+import { Anime } from 'src/app/core/models/anime';
 import { AnimeService } from 'src/app/services/anime.service';
 import { switchMap } from 'rxjs/operators'
 import { observable, Observable } from 'rxjs';
@@ -64,21 +63,5 @@ export class BuscarAnimeComponent implements OnInit {
       // this.modalDialog.DesbloquearPantalla();
       window.scroll(0, 0);
     })
-  }
-  animacionElemento(elemto: Element, badera: boolean) {
-
-    if (badera) {
-      gsap.to(elemto, {
-        duration: 1,
-        scale: 1.1
-      })
-    }
-    else {
-      gsap.to(elemto, {
-        duration: 1,
-        scale: 1
-      })
-
-    }
   }
 }

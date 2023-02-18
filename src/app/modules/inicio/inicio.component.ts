@@ -1,9 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import gsap from 'gsap';
 import { Observable } from 'rxjs';
 import { finalize, map } from 'rxjs/operators';
-import { Anime } from 'src/app/models/anime';
+import { Anime } from 'src/app/core/models/anime';
 import { AnimeService } from 'src/app/services/anime.service';
 
 @Component({
@@ -23,8 +22,8 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getTop();
-    this.initAmima();
+    this.getTop()
+
   }
 
   getTop() {
@@ -32,26 +31,5 @@ export class InicioComponent implements OnInit {
       .pipe(
         map(({ data }) => data))
   }
-  animacionElemento(elemto: Element, badera: boolean) {
 
-    // console.log(elemto)
-    if (badera) {
-      gsap.to(elemto, {
-        duration: 1,
-        scale: 1.1
-      })
-    }
-    else {
-      gsap.to(elemto, {
-        duration: 1,
-        scale: 1
-      })
-    }
-  }
-  initAmima() {
-    gsap.from(this.tituloInicio.nativeElement, {
-      duration: 2,
-      x: (screen.width / 2)
-    })
-  }
 }

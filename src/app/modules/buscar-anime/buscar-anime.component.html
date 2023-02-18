@@ -3,11 +3,11 @@
     class="row row-cols-lg-5 row-cols-md-4 row-cols-md-3 row-cols-2 m-4">
     <div #elemto *ngFor="let obj of listResult" class="col overflow-hidden  position-relative p-0">
         <div class="margi-conten-elemento">
+            <!-- (mouseover)="animacionElemento(contenedorAnimacion,true)"
+            (mouseout)="animacionElemento(contenedorAnimacion,false)"> -->
 
             <div #contenedorElmento class="contenedor-elemento">
-                <div #contenedorAnimacion class="contenedor-animacion"
-                    (mouseover)="animacionElemento(contenedorAnimacion,true)"
-                    (mouseout)="animacionElemento(contenedorAnimacion,false)">
+                <div #contenedorAnimacion class="contenedor-animacion">
                     <a routerLink="/anime/{{obj?.mal_id}}"></a>
                     <img class="card-img-responsive" src="{{obj?.images.webp.image_url}}" alt="">
                     <div class="contenedor-elemento-titulo">

@@ -22,7 +22,6 @@
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "bootstrap": "^5.2.3",
     "dotenv": "^16.0.3",
-    "gsap": "^3.11.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.4.1",
     "zone.js": "^0.11.8"

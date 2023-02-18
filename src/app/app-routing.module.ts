@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AnimeComponent } from './components/anime/anime.component';
-import { BuscarAnimeComponent } from './components/buscar-anime/buscar-anime.component';
-import { InicioComponent } from './components/inicio/inicio.component';
+import { AnimeComponent } from './modules/anime/anime.component';
+import { BuscarAnimeComponent } from './modules/buscar-anime/buscar-anime.component';
+import { InicioComponent } from './modules/inicio/inicio.component';
 
 const routes: Routes = [
   { path: 'inicio', component: InicioComponent },

@@ -37,15 +37,13 @@ export class BuscarAnimeComponent implements OnInit {
     //funcion para realizar la busqueda cada vez que cambie el parametro de la URL
     this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
-        console.log('aquiiii')
         this.nombreBusqueda = params.get('q');
         return this.animeService.get(params.get('q'), this.pagina, this.limitResultPage);
       }
       ))
       .subscribe((r: any) => {
-        console.log('peticion');
-        this.lastPage = r.last_page * this.limitResultPage;
-        this.listResult = r.results;
+        this.lastPage = r.pagination.last_visible_page;
+        this.listResult = r.data;
       }
       )
     //funcion para ejecutar la busqueda de animes pero solo funciona la primera vez
@@ -61,8 +59,8 @@ export class BuscarAnimeComponent implements OnInit {
     // this.modalDialog.BloquearPantalla('#contenedor-resultados-busqueda');
     console.log('entra')
     this.animeService.get(q, this.pagina, this.limitResultPage).subscribe((r: any) => {
-      this.lastPage = r.last_page * this.limitResultPage
-      this.listResult = r.results;
+      this.lastPage = r.pagination.last_visible_page;
+      this.listResult = r.data;
       // this.modalDialog.DesbloquearPantalla();
       window.scroll(0, 0);
     })

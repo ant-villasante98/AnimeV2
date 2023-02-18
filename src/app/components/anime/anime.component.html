@@ -16,10 +16,10 @@
         {{Elemento?.score}}
     </div>
 
-    <a href="{{Elemento?.trailer_url}}">trailer</a>
+    <a href="{{Elemento?.trailer.url}}">trailer</a>
     <div class="contenedor-video">
         <iframe [src]="urlVideo" width="100%" height="auto"></iframe>
     </div>
-    <!-- <iframe src="{{Elemento?.trailer_url}}" frameborder="1" width="100%" height="auto"></iframe> -->
+    <iframe src="{{Elemento?.trailer.url}}" frameborder="1" width="100%" height="auto"></iframe>
 
 </div>

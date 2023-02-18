@@ -25,7 +25,7 @@ export class AnimeService {
     params = params.append('page', page)
 
 
-    return this.httpClient.get(this.resourceURL + 'search/anime', { params: params });
+    return this.httpClient.get(this.resourceURL + 'anime', { params: params });
   }
 
   getById(id: number) {

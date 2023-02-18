@@ -27,9 +27,9 @@ export class AnimeComponent implements OnInit {
   }
   getAnime(id: number) {
     this.animeService.getById(id).subscribe((e: any) => {
-      this.Elemento = e;
+      this.Elemento = e.data;
       this.cargaFinalizada = true;
-      this.transform(this.Elemento.trailer_url);
+      this.transform(this.Elemento.trailer.url);
     })
   }
   transform(url: string) {

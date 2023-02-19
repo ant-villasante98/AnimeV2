@@ -1,4 +1,27 @@
-<div class="row">
+<div class="wrap-anime-top">
+    <div class="container-text">
+        <p>Animes Populares </p>
+    </div>
+    <div class="container-items">
+        <a class="item" *ngFor="let item of listResult$|async" routerLink="/anime/{{item.mal_id}}">
+            <div class="item-img-container">
+                <img class="item-img" [ngSrc]="item.images.webp.image_url" fill alt="">
+            </div>
+            <div class="item-text-container">
+                <p class="item-text">{{item.title}}</p>
+            </div>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- 
+<div class=" row">
     <div class="col-auto col-md-10 m-auto">
         <h5 #tituloInicio id="tituloInicio" class="text">Animes Populares</h5>
 
@@ -10,7 +33,8 @@
                     <div #contenedorElmento class="contenedor-elemento">
                         <div #contenedorAnimacion class="contenedor-animacion">
                             <a routerLink="/anime/{{obj?.mal_id}}"></a>
-                            <img class="card-img-responsive" src="{{obj?.images.webp.image_url}}" alt="">
+                            <img class="card-img-responsive" [ngSrc]="obj?.images.webp.image_url" alt="" height="100"
+                                width="100" style="height: 100%; object-fit: cover;">
                             <div class="contenedor-elemento-titulo">
                                 <h5 class="card-title">{{obj?.title}}</h5>
                             </div>
@@ -20,4 +44,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

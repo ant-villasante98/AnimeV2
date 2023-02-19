@@ -1,5 +1,5 @@
 <div class="contenedor-presentacion">
-    <h1 #tituloPagina id="titulo-pagina" routerLink="/inicio">busqueda anime</h1>
+    <h1 #tituloPagina id="titulo-pagina" routerLink="/inicio">Busqueda Anime</h1>
     <div class="svg_inicio">
         <svg id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
             <path
@@ -51,14 +51,12 @@
         </svg>
     </div>
 </div>
-<div class="top-0">
+<div class="container-input-search">
     <form [formGroup]="formBuscar" class="contenedor-form-buscar">
         <div class="input-group">
             <input id="inputNombreBusqueda" (keyup)="onKeyUp($event)" class="form-control" type="text" name="name"
                 placeholder="Buscar Anime" aria-label="Recipient's " formControlName="nombre"
                 aria-describedby="my-addon">
-            <!-- </div>
-        <div class="input-group-append"> -->
             <button #btnBuscar id="btn-buscar" class="btn btn-primary" type="button" (click)="buscar()">Buscar</button>
         </div>
     </form>

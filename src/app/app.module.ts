@@ -12,11 +12,11 @@ import { MenuComponent } from './shared/components/menu/menu.component';
 import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDialogComponent } from './shared/components/modal-dialog/modal-dialog.component';
 import { MyInterceptor } from './shared/services/my-Interceptor';
+import { InicioModule } from './modules/inicio/inicio.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
     AnimeComponent,
     BuscarAnimeComponent,
     MenuComponent,
@@ -28,7 +28,8 @@ import { MyInterceptor } from './shared/services/my-Interceptor';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    NgbPaginationModule
+    NgbPaginationModule,
+    InicioModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }],
   bootstrap: [AppComponent]

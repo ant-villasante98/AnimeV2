@@ -17,8 +17,6 @@ import { InicioModule } from './modules/inicio/inicio.module';
 @NgModule({
   declarations: [
     AppComponent,
-    AnimeComponent,
-    BuscarAnimeComponent,
     MenuComponent,
     ModalDialogComponent
   ],
@@ -27,9 +25,7 @@ import { InicioModule } from './modules/inicio/inicio.module';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule,
-    NgbPaginationModule,
-    InicioModule
+    NgbModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }],
   bootstrap: [AppComponent]

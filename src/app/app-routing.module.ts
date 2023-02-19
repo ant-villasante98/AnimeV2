@@ -9,8 +9,14 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./modules/inicio/inicio.module').then(m => m.InicioModule)
   },
-  { path: 'buscar/:q', component: BuscarAnimeComponent },
-  { path: 'anime/:id', component: AnimeComponent },
+  {
+    path: 'buscar/:q',
+    loadChildren: () => import('./modules/buscar-anime/buscar-anime.module').then(m => m.BuscarAnimeModule)
+  },
+  {
+    path: 'anime/:id',
+    loadChildren: () => import('./modules/anime/anime.module').then(m => m.AnimeModule)
+  },
   { path: '', redirectTo: '/inicio', pathMatch: 'full' }
 ];
 

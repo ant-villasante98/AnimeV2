@@ -1,0 +1,17 @@
+.bg-main {
+    display: flex;
+    position: fixed;
+    align-items: end;
+    z-index: -1;
+    top: 0;
+    height: 90vh;
+    width: 100%;
+    background-image: url(/assets/img/41546wide.jpg);
+}
+
+.bg-main>div {
+    width: 100%;
+    height: 60%;
+    /* background-image: linear-gradient(0deg, white 0%, trasparente 50%); */
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.08)90%, transparent 100%);
+}

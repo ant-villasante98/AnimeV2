@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
-import { ModalDialogComponent } from '../shared/components/modal-dialog/modal-dialog.component';
+import { ModalDialogComponent } from '../../shared/components/modal-dialog/modal-dialog.component';
 
 @Injectable({
   providedIn: 'root'

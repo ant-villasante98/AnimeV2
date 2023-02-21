@@ -2,6 +2,7 @@ import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
+import { ReticulaElementosModule } from "src/app/shared/components/reticula-elementos/reticula-elementos.module";
 import { InicioRoutingModule } from "./inicio-routing.module";
 
 import { InicioComponent } from "./inicio.component";
@@ -15,7 +16,8 @@ import { InicioComponent } from "./inicio.component";
         HttpClientModule,
         InicioRoutingModule,
         CommonModule,
-        NgOptimizedImage
+        NgOptimizedImage,
+        ReticulaElementosModule
     ]
 })
 export class InicioModule { }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Anime } from 'src/app/core/models/anime';
-import { AnimeService } from 'src/app/services/anime.service';
+import { AnimeService } from 'src/app/core/services/anime.service';
 
 @Component({
   selector: 'app-anime',

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpParams } from '@angular/common/http'
-import { Anime } from '../core/models/anime';
+import { Anime } from '../models/anime';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,8 +23,8 @@ export class AnimeService {
     console.log(name + 'servicio');
     params = params.append('limit', limit);
     params = params.append('page', page)
-
-
+    // params = params.append('rating', 'pg')
+    console.log(params.toString())
     return this.httpClient.get(this.resourceURL + 'anime', { params: params });
   }
 

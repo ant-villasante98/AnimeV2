@@ -2,7 +2,7 @@
     <div class="container-text">
         <p>Animes Populares </p>
     </div>
-    <div class="container-items">
+    <!-- <div class="container-items">
         <a class="item" *ngFor="let item of listResult$|async" routerLink="/anime/{{item.mal_id}}">
             <div class="item-img-container">
                 <img class="item-img" [ngSrc]="item.images.webp.image_url" fill alt="">
@@ -12,7 +12,8 @@
             </div>
         </a>
 
-    </div>
+    </div> -->
+    <app-reticula-elementos [$listElementos]="listResult$"></app-reticula-elementos>
 
 </div>
 

@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { finalize, map } from 'rxjs/operators';
 import { Anime } from 'src/app/core/models/anime';
-import { AnimeService } from 'src/app/services/anime.service';
+import { AnimeService } from 'src/app/core/services/anime.service';
 
 @Component({
   selector: 'app-inicio',

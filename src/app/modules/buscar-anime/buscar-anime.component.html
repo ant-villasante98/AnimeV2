@@ -1,11 +1,9 @@
-<p class="nombre-busqueda">"{{nombreBusqueda}}"</p>
-<div id="contenedor-resultados-busqueda" *ngIf="listResult==null?false:true"
+<p class="nombre-busqueda">"{{nombreBusqueda|uppercase}}"</p>
+<!-- <div id="contenedor-resultados-busqueda" *ngIf="listResult==null?false:true"
     class="row row-cols-lg-5 row-cols-md-4 row-cols-md-3 row-cols-2 m-4">
     <div #elemto *ngFor="let obj of listResult" class="col overflow-hidden  position-relative p-0">
         <div class="margi-conten-elemento">
-            <!-- (mouseover)="animacionElemento(contenedorAnimacion,true)"
-            (mouseout)="animacionElemento(contenedorAnimacion,false)"> -->
-
+            
             <div #contenedorElmento class="contenedor-elemento">
                 <div #contenedorAnimacion class="contenedor-animacion">
                     <a routerLink="/anime/{{obj?.mal_id}}"></a>
@@ -17,8 +15,16 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<!-- (mouseover)="animacionElemento(contenedorAnimacion,true)"
+(mouseout)="animacionElemento(contenedorAnimacion,false)"> -->
+
+<app-reticula-elementos [$listElementos]="$listResult"></app-reticula-elementos>
+
+
 <div *ngIf="lastPage?true:false" class="contenedor-paginacion">
-    <ngb-pagination [(page)]="pagina" (pageChange)="buscar(nombreBusqueda)" [maxSize]="4" [collectionSize]="lastPage">
+    <ngb-pagination class="bg-dark text-light" [(page)]="pagina" (pageChange)="buscar(nombreBusqueda)" [maxSize]="4"
+        [collectionSize]="lastPage">
     </ngb-pagination>
 </div>

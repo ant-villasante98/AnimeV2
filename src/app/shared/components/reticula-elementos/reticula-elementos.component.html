@@ -1,0 +1,14 @@
+<div class="wrap-reticula">
+    <div class="container-items">
+        <a class="item" *ngFor="let item of $listElementos|async" routerLink="/anime/{{item.mal_id}}">
+            <div class="item-img-container">
+                <img class="item-img {{censurarImg(item)}}" [ngSrc]="item.images.webp.image_url" fill alt="">
+            </div>
+            <div class="item-text-container">
+                <p class="item-text">{{item.title}}</p>
+            </div>
+        </a>
+
+    </div>
+
+</div>

@@ -1,25 +1,35 @@
-<button class="btn btn-success mb-4" type="button" routerLink="/">Inicio</button>
+<button class="btn btn-dark btn-success mb-4" type="button" routerLink="/">Inicio</button>
 <div class="contenedor-detalle-anime" *ngIf="cargaFinalizada">
-    <div class="titulo-anime">
-        {{Elemento?.title}}
-    </div>
-    <div class="row pt-3">
-        <div class="col col-md-3">
-            <img class="content-img-anime" src="{{Elemento?.images.jpg.image_url}}" alt="">
+    <div class="info-anime">
+        <div class="container-title-img-score">
+
+            <div class="container-img-anime">
+                <img class="img-anime" src="{{Elemento?.images.jpg.image_url}}" alt="">
+            </div>
+
+            <div class="title-score">
+                <p class="titulo-anime">
+                    {{Elemento?.title}}
+                </p>
+                <div class="score">
+                    {{Elemento?.score}}
+                </div>
+                <div class="score">
+                    <span *ngFor="let gen of Elemento?.genres">
+                        {{gen.name}},
+                    </span>
+                </div>
+            </div>
         </div>
         <div class="col-auto col-md p-3">
             <p class="sinopsis">{{Elemento?.synopsis}}</p>
         </div>
-    </div>
 
-    <div>
-        {{Elemento?.score}}
-    </div>
 
-    <a href="{{Elemento?.trailer.url}}">trailer</a>
-    <div class="contenedor-video">
+        <a *ngIf="Elemento?.trailer.url" href="{{Elemento?.trailer.url}}" target="_blank">Trailer</a>
+        <!-- <div class="contenedor-video">
         <iframe [src]="urlVideo" width="100%" height="auto"></iframe>
-    </div>
-    <iframe src="{{Elemento?.trailer.url}}" frameborder="1" width="100%" height="auto"></iframe>
+    </div> -->
+        <!-- <iframe src="{{Elemento?.trailer.url}}" frameborder="1" width="100%" height="auto"></iframe> -->
 
-</div>
+    </div>

@@ -11,7 +11,9 @@ export class MyInterceptor implements HttpInterceptor {
 
     constructor(
         private ms: ModalDialogService
-    ) { }
+    ) {
+
+    }
 
     intercept(
         req: HttpRequest<any>,

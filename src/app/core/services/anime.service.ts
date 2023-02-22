@@ -20,11 +20,9 @@ export class AnimeService {
     if (name !== '' || name !== null) {
       params = params.append('q', name)
     }
-    console.log(name + 'servicio');
+    console.log(name + ' --servicio');
     params = params.append('limit', limit);
     params = params.append('page', page)
-    // params = params.append('rating', 'pg')
-    console.log(params.toString())
     return this.httpClient.get(this.resourceURL + 'anime', { params: params });
   }
 

@@ -24,7 +24,7 @@
 
 
 <div *ngIf="lastPage?true:false" class="contenedor-paginacion">
-    <ngb-pagination class="bg-dark text-light" [(page)]="pagina" (pageChange)="buscar(nombreBusqueda)" [maxSize]="4"
+    <ngb-pagination class="bg-dark text-light" [(page)]="pagina" (pageChange)="nextPage(nombreBusqueda)" [maxSize]="4"
         [collectionSize]="lastPage">
     </ngb-pagination>
 </div>

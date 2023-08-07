@@ -67,6 +67,7 @@
 .contenedor-form-buscar {
   width: min(100%, 330px);
   margin: auto;
+  padding: 0 1rem;
 
 }
 

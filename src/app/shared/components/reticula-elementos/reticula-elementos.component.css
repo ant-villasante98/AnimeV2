@@ -3,6 +3,10 @@
     margin: auto;
 } */
 
+:host {
+    width: 100%;
+}
+
 .container-items {
     display: grid;
     grid-template-columns: 1fr;

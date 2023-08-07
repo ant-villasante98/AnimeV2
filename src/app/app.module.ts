@@ -10,6 +10,7 @@ import { MenuComponent } from './shared/components/menu/menu.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDialogComponent } from './shared/components/modal-dialog/modal-dialog.component';
 import { MyInterceptor } from './shared/services/my-Interceptor';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [

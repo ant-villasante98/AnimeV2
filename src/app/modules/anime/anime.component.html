@@ -7,29 +7,34 @@
                 <img class="img-anime" src="{{Elemento?.images.jpg.image_url}}" alt="">
             </div>
 
-            <div class="title-score">
+            <div class="title-div">
                 <p class="titulo-anime">
                     {{Elemento?.title}}
                 </p>
                 <div class="score">
-                    {{Elemento?.score}}
-                </div>
-                <div class="score">
-                    <span *ngFor="let gen of Elemento?.genres">
-                        {{gen.name}},
-                    </span>
+                    Puntaje: {{Elemento?.score}}
                 </div>
             </div>
-        </div>
-        <div class="col-auto col-md p-3">
-            <p class="sinopsis">{{Elemento?.synopsis}}</p>
+            <div class="synopsis">
+                <p class="synopsis-text">{{Elemento?.synopsis}}</p>
+            </div>
+
+            <div class="container-genres">
+                <label>Genres: </label>
+                <span *ngFor="let gen of Elemento?.genres">
+                    {{gen.name}},
+                </span>
+            </div>
+
         </div>
 
 
-        <a *ngIf="Elemento?.trailer.url" href="{{Elemento?.trailer.url}}" target="_blank">Trailer</a>
-        <!-- <div class="contenedor-video">
-        <iframe [src]="urlVideo" width="100%" height="auto"></iframe>
-    </div> -->
-        <!-- <iframe src="{{Elemento?.trailer.url}}" frameborder="1" width="100%" height="auto"></iframe> -->
+        <!-- <a *ngIf="Elemento?.trailer.url" href="{{Elemento?.trailer.url}}" target="_blank">Trailer</a> -->
+        <div class="container-video" *ngIf="Elemento.trailer.embed_url">
+
+            <iframe class="iframe-video" [src]="urlVideo" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- <youtube-player></youtube-player> -->
 
     </div>
